@@ -1,0 +1,332 @@
+html{
+
+	box-sizing:border-box;
+}
+
+*,*:before, *:after{
+	Box-sizing:inherit;
+	}
+
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    margin: 0; /
+    padding: 0;
+    background-image: linear-gradient( to top, var(--grisclaro) 0%, var(--blanco) 100%);
+
+}
+
+:root{
+    --morado:#8f16b7;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --amarillo:#d8e212f5; 
+    --blanco:#ffffff;
+    --grisclaro:#dfe9f3;
+    --gris:#cfcfcf;}
+
+/* Fuentes de google fonts */
+.krub-regular {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.krub-bold {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+   max-width: 120rem;
+      width: 90%;
+    margin: 0 auto;
+}
+
+/*Clase boton*/
+.boton{
+	background-color: var(--secundario);   /*Para el color de fondo del botón*/
+	color: var(--blanco); /*para el color de texto*/
+	padding: 1rem 3rem;
+	margin-top:1rem;
+	font-size:2rem;
+	text-decoration:none;
+	text-transform: uppercase; /*para transformar el texto a mayúsculas, así si deseamos colocarlo en minúsculas lo hacer en todos los botones con esta propiedad.*/
+	font-weight: bold;
+
+	/*Para colocar las esquinas redondeadas, escribimos:*/
+	border-radius: .5rem;
+	width: 90%;  /*escribimos esta propiedad para que el botón abarque el 90% de la pantalla*/
+	text-align: center; /*centramos el texto*/
+	 border:none;
+}
+
+/*Media query del boton*/
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+      }
+}
+
+.nav-bg{
+    background-color: var(--oscuro);
+}
+
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content:space-between;
+}
+
+.navegacion-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 2rem;  
+  margin: 0 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.navegacion-principal a:visited{
+    color: #23b470;
+}
+
+.hero-img {
+    width: 80%;           
+    height: auto;         
+    object-fit: cover;    
+    object-position: center; 
+    display: block;       
+    margin: 0 auto;      
+}
+
+/*Estilos generales del sitio*/
+
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco); /*se le agrega un fondo blanco*/
+    padding: 2rem; /*agregamos un padding*/
+    border-radius: 1rem; /*permitirá darnos un border redondeado*/
+}
+
+h1{
+  font-size: 3.8rem;
+}
+
+h2{
+  font-size: 2.8rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h1,h2,h3{
+  text-align: center;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #f5f5f5;
+}
+
+.servicios{
+    display:grid;
+    grid-template-columns:33.3% 33.3% 33.3%;
+}
+
+.servicio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.servicio h3 {
+    margin-bottom: 1rem;
+}
+
+.servicio p {
+    margin-top: 1rem;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto 1rem auto;
+}
+
+
+
+/*MEDIA QUERY (TABLETS)*/
+
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        column-gap: 1rem;
+    }
+}
+
+.formulario {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--gris);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  font-size: 2.4rem;
+  color: var(--secundario);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--primario);
+  padding-bottom: 1rem;
+}
+
+.campo {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 1.6rem;
+  color: var(--oscuro);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Krub', sans-serif;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--secundario);
+  box-shadow: 0 0 5px rgba(0, 151, 167, 0.4);
+}
+
+.campo textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.boton-enviar {
+  text-align: center;
+}
+
+.boton-enviar input[type="submit"] {
+  background-color: var(--secundario);
+  color: var(--blanco, #ffffff);
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-enviar input[type="submit"]:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+  transform: scale(1.05);
+}
+/* Estilos de la clase hero*/
+.hero{
+    background-image: url(../hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Sombra encima del hero */
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);  /* sombra negra con .7 de transparencia */
+    width: 100%;  
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color blanco para texto dentro del hero */
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.contenido-hero a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background-color: var(--secundario);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Estilo para el icono de ubicación y el texto */
+.ubicacion {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    gap: 0.5rem; /* separa un poco el icono del texto */
+}
+
+.ubicacion p {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/*Agregamos el media query Para una tableta*/
+@media(min-width:768px){
+	.navegacion-principal{
+		flex-direction:row;
+    justify-content: space-between;
+	}
+}
+
+
